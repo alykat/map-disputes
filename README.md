@@ -1,9 +1,5 @@
-Copyright 2014 NPR.  All rights reserved.  No part of these materials may be reproduced, modified, stored in a retrieval system, or retransmitted, in any form or by any means, electronic, mechanical or otherwise, without prior written permission from NPR.
+Map Disputes
 
-(Want to use this code? Send an email to nprapps@npr.org!)
-
-
-map-disputes
 ========================
 
 * [What is this?](#what-is-this)
@@ -30,7 +26,18 @@ map-disputes
 What is this?
 -------------
 
-**TKTK: Describe map-disputes here.**
+Show how Google Maps renders disputed territories differently depending on who's looking (in-progress for #owhack)
+
+Built (in-progress!) for the [Knight-Mozilla-MIT "The Open Internet" Hack Day](https://wiki.mozilla.org/OpenNews/hackdays/openinternet), held June 21-22, 2014.
+
+This project was built using the [NPR Visuals app-template](https://github.com/nprapps/app-template/) as a starting point.
+
+Contributors:
+- Jose Dominguez (@josmas)
+- Alyson Hurt (@alykat)
+- Gus Wezerek (@gwezerek)
+- Katie Zhu (@ktzhu)
+
 
 Assumptions
 -----------
@@ -40,9 +47,9 @@ The following things are assumed to be true in this documentation.
 * You are running OSX.
 * You are using Python 2.7. (Probably the version that came OSX.)
 * You have [virtualenv](https://pypi.python.org/pypi/virtualenv) and [virtualenvwrapper](https://pypi.python.org/pypi/virtualenvwrapper) installed and working.
-* You have NPR's AWS credentials stored as environment variables locally.
+* You have AWS credentials stored as environment variables locally.
 
-For more details on the technology stack used with the app-template, see our [development environment blog post](http://blog.apps.npr.org/2013/06/06/how-to-setup-a-developers-environment.html).
+For more details on the technology stack used with the NPR Visuals app-template, see their [development environment blog post](http://blog.apps.npr.org/2013/06/06/how-to-setup-a-developers-environment.html).
 
 What's in here?
 ---------------
@@ -86,7 +93,7 @@ Then bootstrap the project:
 cd map-disputes
 mkvirtualenv --no-site-packages map-disputes
 pip install -r requirements.txt
-npm install
+npm install less universal-jst
 fab update
 ```
 
