@@ -22,8 +22,8 @@ PROJECT_FILENAME = 'map_disputes'
 
 # The name of the repository containing the source
 REPOSITORY_NAME = 'map-disputes'
-REPOSITORY_URL = 'git@github.com:nprapps/%s.git' % REPOSITORY_NAME
-REPOSITORY_ALT_URL = None # 'git@bitbucket.org:nprapps/%s.git' % REPOSITORY_NAME'
+REPOSITORY_URL = 'git@github.com:alykat/%s.git' % REPOSITORY_NAME
+REPOSITORY_ALT_URL = None
 
 # Project name used for assets rig
 # Should stay the same, even if PROJECT_SLUG changes
@@ -86,17 +86,6 @@ COPY_PATH = 'data/copy.xlsx'
 SHARING
 """
 SHARE_URL = 'http://%s/%s/' % (PRODUCTION_S3_BUCKETS[0], PROJECT_SLUG)
-
-"""
-ADS
-"""
-
-NPR_DFP = {
-    'STORY_ID': '1002',
-    'TARGET': 'homepage',
-    'ENVIRONMENT': 'NPRTEST',
-    'TESTSERVER': 'false'
-}
 
 """
 SERVICES
