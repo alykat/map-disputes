@@ -21,6 +21,12 @@
             <div class="col-md-12">
                 <h1>{{ COPY.copy.title }}</h1>
                 <h2>{{ COPY.copy.description }}</h2>
+                
+                <ul class="subnav">
+                    {% for row in COPY.final_set|sort(attribute='entity_name') %}
+                    <li><a href="#{{ row.slug }}">{{ row.entity_name }}</a></li>
+                    {% endfor %}
+                </ul>
             </div>
         </div>
     </div>
@@ -32,7 +38,7 @@
             <div class="col-md-12 disputes">
                 
                 {% for row in COPY.final_set|sort(attribute='entity_name') %}
-                <div class="disputes-item disputes-item--{{ row.slug }}">
+                <div class="disputes-item" id="{{ row.slug }}">
                     <h3 class="disputed-name">{{ row.entity_name }}</h3>
                     
                     <div class="row">
