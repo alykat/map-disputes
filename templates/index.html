@@ -36,40 +36,40 @@
                     <h3 class="disputed-name">{{ row.entity_name }}</h3>
                     
                     <div class="row">
-                        <div class="col-sm-8">
+                        <div class="col-sm-9">
                             <p class="disputed-description">{{ row.description }} <em>(Source: <a href="{{ row.desc_source }}">Wikipedia</a>)</em></p>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-3">
                             <h4>Status</h4>
                             <p>{{ row.temp_claim }}</p>
                         </div>
                     </div>
                     
                     <div class="row claimants">
-                        {% if row.image_us %}
                         <div class="col-sm-4 claimants-item">
                             <h4>What U.S. users see in Google Maps</h4>
                             <div class="disputes-item-map" data-url="{{ row.image_us }}"></div>
                         </div>
+                        {% if row.image_us %}
                         {% endif %}
 
                         {% if row.image_cn %}
                         <div class="col-sm-4 claimants-item">
-                            <h4>What Chinese users see in Google Maps</h4>
+                            <h4>What Chinese users see</h4>
                             <div class="disputes-item-map" data-url="{{ row.image_cn }}"></div>
                         </div>
                         {% endif %}
 
-                        {% if row.image_cn %}
+                        {% if row.image_in %}
                         <div class="col-sm-4 claimants-item">
-                            <h4>What Indian users see in Google Maps</h4>
+                            <h4>What Indian users see</h4>
                             <div class="disputes-item-map" data-url="{{ row.image_in }}"></div>
                         </div>
                         {% endif %}
 
-                        {% if row.image_cn %}
+                        {% if row.image_ru %}
                         <div class="col-sm-4 claimants-item">
-                            <h4>What Russian users see in Google Maps</h4>
+                            <h4>What Russian users see</h4>
                             <div class="disputes-item-map" data-url="{{ row.image_ru }}"></div>
                         </div>
                         {% endif %}
