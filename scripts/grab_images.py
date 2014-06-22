@@ -64,7 +64,7 @@ def crop_images():
     for loc in locations.keys():
         im = Image.open(directory + timestamp_day + loc + '.png')
         # Magic numbers - trial and error to remove map interface widgets
-        im.crop((500, 200, 1400, 1400)).save(directory + timestamp_day + loc + '.cropped.png', 'PNG')
+        im.crop((500, 200, 1400, 1100)).save(directory + timestamp_day + loc.lower() + '.cropped.png', 'PNG')
 
 try:
     subprocess.check_call(['capturejs']);
