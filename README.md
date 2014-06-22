@@ -9,6 +9,7 @@ Map Disputes
 * [Save media assets](#save-media-assets)
 * [Add a page to the site](#add-a-page-to-the-site)
 * [Run the project](#run-the-project)
+* [Scripts for images](#scripts-for-images)
 * [COPY editing](#copy-editing)
 * [Arbitrary Google Docs](#arbitrary-google-docs)
 * [Run Python tests](#run-python-tests)
@@ -143,6 +144,18 @@ python app.py
 ```
 
 Visit [localhost:8000](http://localhost:8000) in your browser.
+
+Scripts for Images
+------------------
+There is a script in the *scripts* folder to generate map images based on
+  location. It uses [capturejs](https://github.com/superbrothers/capturejs) and [PIL](http://www.pythonware.com/products/pil/).
+
+- Install capturejs with : ``npm install capturejs -g``
+- PIL is already in the requirements file
+
+**Run the script: ** ``cd scripts; python grab_images``
+
+***Note:*** WIP : The script currently contains hardcoded data for images.
 
 COPY editing
 ------------
