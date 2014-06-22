@@ -28,7 +28,9 @@ What is this?
 
 Show how Google Maps renders disputed territories differently depending on who's looking (in-progress for #owhack)
 
-Built (in-progress!) for the [Knight-Mozilla-MIT "The Open Internet" Hack Day](https://wiki.mozilla.org/OpenNews/hackdays/openinternet), held June 21-22, 2014.
+http://opennews.kzhu.io/map-disputes/
+
+This project was built for the [Knight-Mozilla-MIT "The Open Internet" Hack Day](https://wiki.mozilla.org/OpenNews/hackdays/openinternet), held June 21-22, 2014.
 
 Contributors:
 - Jose Dominguez (@josmas)
