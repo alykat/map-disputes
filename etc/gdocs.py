@@ -31,10 +31,11 @@ class GoogleDoc(object):
 
     # You can change these with kwargs but it's not recommended.
     spreadsheet_url = 'https://spreadsheets.google.com/feeds/download/spreadsheets/Export?key=%(key)s&exportFormat=%(format)s&gid=%(gid)s'
-    new_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/%(key)s/export?format=%(format)s&id=%(key)s&gid=%(gid)s'
+#    new_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/%(key)s/export?format=%(format)s&id=%(key)s&gid=%(gid)s'
+    new_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/%(key)s/export?format=%(format)s'
     auth = None
-    email = os.environ.get('APPS_GOOGLE_EMAIL', None)
-    password = os.environ.get('APPS_GOOGLE_PASS', None)
+    email = os.environ.get('OWHACK_GOOGLE_EMAIL', None)
+    password = os.environ.get('OWHACK_GOOGLE_PASS', None)
     scope = "https://spreadsheets.google.com/feeds/"
     service = "wise"
     session = "1"
@@ -55,7 +56,7 @@ class GoogleDoc(object):
         """
         data = {}
         if not self.email or not self.password:
-            raise KeyError("Error! You're missing some variables. You need to export APPS_GOOGLE_EMAIL and APPS_GOOGLE_PASS.")
+            raise KeyError("Error! You're missing some variables. You need to export OWHACK_GOOGLE_EMAIL and OWHACK_GOOGLE_PASS.")
 
         else:
             data['Email'] = self.email

@@ -1,5 +1,4 @@
 Map Disputes
-
 ========================
 
 * [What is this?](#what-is-this)

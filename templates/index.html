@@ -1,56 +1,36 @@
 {% extends '_base.html' %}
 
-{% block header_content %}
+{% block content %}
+<nav role="navigation">
+    <ul class="site-links">
+        <li>{{ COPY.copy.header_title }}</li>
+    </ul>
+    <ul class="social-links">
+        <li class="twitter"><a rel="external" href="http://twitter.com/share?text={{ COPY.sharing.twitter_text|urlencode }}&amp;url={{ SHARE_URL|urlencode }}" alt="Share on Twitter" target="_blank" onclick="_gaq.push(['_trackEvent', '{{ PROJECT_SLUG }}', 'tweet', 'nav']);">Share This Page On Twitter</a></li>
+        <li class="facebook"><a rel="external" href="https://www.facebook.com/dialog/feed?app_id={{ FACEBOOK_APP_ID }}&amp;link={{ SHARE_URL|urlencode }}&amp;name={{ COPY.sharing.facebook_title|urlencode }}&amp;picture={{ FACEBOOK_IMAGE_URL|urlencode }}&amp;redirect_uri={{ SHARE_URL|urlencode }}" alt="Share on Facebook" target="_blank" onclick="_gaq.push(['_trackEvent', '{{ PROJECT_SLUG }}', 'facebook', 'nav']);">Like This Page On Facebook</a></li>
+    </ul>
+    <ul class="site-links-2">
+    </ul>
+</nav>
+
 <header>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>{{ COPY.content.project_name }}</h1>
-                <h2>{{ COPY.content.lorem_ipsum }}</h2>
+                <h1>{{ COPY.copy.title }}</h1>
+                <h2>{{ COPY.copy.description }}</h2>
             </div>
         </div>
     </div>
 </header>
-{% endblock %}
 
-
-{% block content %}
-<h1>{{ COPY.content.project_name }}</h1>
-
-<div id="story-meta">
-    <p class="byline">by <span>{{ COPY.content.byline }}</span></p>
-    <p class="dateblock">
-        <span class="date">{{ COPY.content.pubdate }}</span>
-        <span class="time"> {{ COPY.content.pubtime }}</span>
-    </p>
-</div>
-
-<a class="comment-button comment-button-bubble comment-drawer-toggle" href="javascript:">
-    <span class="comment-count"></span>
-</a>
-
-<a class="comment-button comment-button-article comment-drawer-toggle" href="javascript:">
-    <span class="comment-count"></span>
-    <span class="comment-label">Comment</span>
-</a>
-
-<h2>Example COPY list</h2>
-<dl>
-    {% for row in COPY.example_list %}
-    <dt>{{ row.term }}</dt><dd>{{ row.definition }}</dd>
-    {% endfor %}
-</dl>
-
-<h2>JST example</h2>
-<p id="template-example"></p>
-{% endblock %}
-
-
-{% block wide_content %}
-<div class="row">
-    <div class="col-md-12">
-        <h2>{{ COPY.content.footer_title }}</h2>
-        <p>{{ COPY.content.lorem_ipsum }}</p>
+<section id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p>lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
     </div>
-</div>
+</section>
 {% endblock %}
