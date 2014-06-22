@@ -25,8 +25,6 @@
                 </div>
                 <img src="assets/maps/animated.gif" alt="" class="animated" />
                 <p>{{ COPY.copy.description_p2 }}</p>
-                <p class="about"><a href="{{COPY.copy.about_link }}">{{ COPY.copy.about_text }}</a></p>
-
                 <ul class="subnav">
                     {% for row in COPY.final_set|sort(attribute='entity_name') %}
                     <li><a href="#{{ row.slug }}">{{ row.entity_name }}</a></li>
@@ -137,4 +135,7 @@
         </div>
     </div>
 </section>
+<footer>
+    <p class="about"><a href="{{COPY.copy.about_link }}">{{ COPY.copy.about_text }}</a></p>
+</footer>
 {% endblock %}
