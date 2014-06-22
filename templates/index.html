@@ -29,31 +29,46 @@
 <section id="content">
     <div class="container">
         <div class="row">
-                <div class="col-md-12">
-                    <div class="disputes">
+            <div class="col-md-12 disputes">
+                
+                {% for row in COPY.final_set|sort(attribute='entity_name') %}
+                <div class="disputes-item disputes-item--{{ row.slug }}">
+                    <h3 class="disputed-name">{{ row.entity_name }}</h3>
+                    <p class="disputed-description">{{ row.description }} <em>(Source: <a href="{{ row.desc_source }}">Wikipedia</a>)</em></p>
+                    <p><strong>Who Disputes This:</strong> {{ row.temp_claim }}</p>
                     
-                        {% for row in COPY.final_set %}
-                    
-                        {% for dispute in disputes %}
-                        <div class="disputes-item disputes-item--{{ dispute.slug }}">
-                            <p class="disputes-item-title">{{ dispute.name }} – US view</p>
-                            <div class="disputes-item-map" data-url="{{ dispute.image_us }}"></div>
+                    <ul class="claimants">
+                        {% if row.image_us %}
+                        <li class="claimants-item">
+                            <h4>What U.S. users see in Google Maps</h4>
+                            <div class="disputes-item-map" data-url="{{ row.image_us }}"></div>
+                        </li>
+                        {% endif %}
 
-                            <ul class="claimants">
-                            {% for claimant in dispute.claimants %}
-                                <li class="claimants-item claimants-item--{{ claimant.slug }}">
-                                    <div class="claimants-item-map" data-url="{{ claimant.url }}"></div>
-                                </li>
-                            {% endfor %}
-                            </ul>
-                        </div>
+                        {% if row.image_cn %}
+                        <li class="claimants-item">
+                            <h4>What Chinese users see in Google Maps</h4>
+                            <div class="disputes-item-map" data-url="{{ row.image_cn }}"></div>
+                        </li>
+                        {% endif %}
 
-                        {% endfor %}
-                    </div>
+                        {% if row.image_in %}
+                        <li class="claimants-item">
+                            <h4>What Indian users see in Google Maps</h4>
+                            <div class="disputes-item-map" data-url="{{ row.image_in }}"></div>
+                        </li>
+                        {% endif %}
 
-                    <h3 class="disputed-name">Golan Heights</h3>
-                    <img src="">
-                    <p class="disputed-description">"Demchok is a small village and military emcampment in the Indian-administered part of the disputed Demchok sector south of Aksai Chin, in the Leh district of Ladakh in the state of Jammu and Kashmir. The Line of Actual Control (LAC) passes along the southeast side of the village, following a wadi just upstream from the nearby Indus River. Across the wadi, less than a kilometer away, is a Chinese-administered village, called Dêmqog, which was once part of Demchok. It is part of the Ngari Prefecture within Tibet." <a href="http://en.wikipedia.org/wiki/Demchok" class="disputed-source">Source</a>
+                        {% if row.image_ru %}
+                        <li class="claimants-item">
+                            <h4>What Russian users see in Google Maps</h4>
+                            <div class="disputes-item-map" data-url="{{ row.image_ru }}"></div>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+                {% endfor %}
+
             </div>
         </div>
     </div>

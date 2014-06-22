@@ -51,13 +51,12 @@
 
 // General styles
 body {
-    font: 16px/1.5em Helvetica, Arial, sans-serif;
+    font: 16px/1.5em @font-family-sans-serif;
     color: #111;
     -webkit-font-smoothing: antialiased;
-    // background: red;
 }
 h1 {
-    font: normal 32px/1.125 Gotham, Georgia, serif;
+    font: normal 32px/1.125 @font-family-sans-serif;
     margin: 0 0 22px 0;
 }
 h2 {
@@ -171,24 +170,6 @@ nav {
 	}
 	a:hover,
 	a:active { color: #bccae5; }
-
-    .npr {
-        width: 61px;
-
-        img {
-            margin: -2px 0 0 0;
-            width: 100%;
-            height: auto;
-        }
-    }
-	.shop {
-	    padding-left: 18px;
-	    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAICAYAAAAvOAWIAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAG11AABzoAAA97wAAIT6AAB5yAAA7p8AADFuAAAPXaV5P1wAAAB/SURBVHjafM6xCUJBEITh7x1WYA/mmtiSuZGI+NIXGRrYgRVoERYiiBe9yORMVjkOdGH4l2F22G57vBVkzII/J6HDGU+Uf0pxtMMDCwxR0NIkwhk9LrhjimVDqXrpFMGMFa4Nv82wxzz2EtzUrJvXwTF+/GgM/1WHDw1bf3gPAMfKIptJWVXJAAAAAElFTkSuQmCC) no-repeat 0% 50%;
-	}
-	.stations {
-	    padding-left: 22px;
-	    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAG4nAABzrwAA92wAAIZNAABt8wAA6sIAADA+AAAYLjTjngYAAAGBSURBVHjapJO7UQMxEIa/u6GAowO7AptRAeAKODowoSJ8qRXYDhTbJFaIqQB3YMitwVQAHeAOjuQXozkYE7AzmpX2oX38u0XbtgC4EJcA3pqGE9S1KyWcAxPgjb/pDZjIh2K63veAV+DZW3PjQhwCQ2/NphN5DBy8NQcX4hNwBVyUQA1UQONCrIAdMPgl8gDYyaaRT11M1/udahq5ECfAHXChj5dyboCtMr331qxciLvvHgAv4pfA1ltzlHOls5RsK5tvn5J/UplFTr/WWZ1HndSfupMtxXS9nyjdvozfgQ2w6ASbAWPZVbJrShkfszpHwnoGfOrMJBtl/TkCm6Jt2zRIM+A24e9CfM/De2v62Tw8AAtvzbyUcg6sEv4uxBroqeuPQE+yNA8r+XCWRch34Fo8wZhk2+6uFGmZspGtVPdBWQB8AEPgXD34AWNOKdWhoFzonutOfnAnnjKodM91v5fgQuwJ31PU99Z8pMdZRzkWH3lrnju9udKmjoF5kn8NAFaQnhYx4i5jAAAAAElFTkSuQmCC) no-repeat 0% 50%;
-	}
 }
 
 
@@ -214,42 +195,46 @@ header {
 }
 
 
-// Cube ad
-.adwrapper {
-    zoom: 1;
-    padding: 0 0 12px 0;
-
-    .sponsor300 {
-        overflow: hidden;
-        width: 300px;
-        margin: 0 auto;
-    }
-    p {
-        margin: 6px 0 0 0;
-        font-size: 11px;
-        color: #999;
-
-        &.left { float: left; }
-        &.right { float: right; }
-        a { color: #6d8ac4; }
-    }
-}
-
-
 // Content
 #content { margin-top: 44px; }
-#story-meta {
-	margin-bottom: 22px;
 
-	p {
-		font-size: 12px;
-		margin: 0;
-		color: #666;
 
-		&.byline span { text-transform: uppercase; }
-		&.dateblock .date { margin-right: 0.8em; }	}
+// -----------------------------------
+// disputes component
+.disputes-item {
+    margin-bottom: 66px;
 }
-h1 + #story-meta { margin-top: -11px; }
+.disputed-name {
+    font-size: 32px;
+    margin: 0 0 11px 0;
+}
+.disputed-description {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 0 11px 0;
+}
+
+.disputes-item-map {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 600px;
+}
+
+
+// -----------------------------------
+// claimants component
+.claimants-item {
+  list-style-type: none;
+}
+.claimants-item-map {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px;
+}
+
+
 
 
 // Footer
@@ -318,26 +303,6 @@ footer {
 	}
 }
 
-// -----------------------------------
-// disputes component
-.disputes-item-map {
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 600px;
-}
-
-// -----------------------------------
-// claimants component
-.claimants-item {
-  list-style-type: none;
-}
-.claimants-item-map {
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 300px;
-}
 
 // Media queries
 @media (max-width: 979px) {
@@ -360,7 +325,6 @@ footer {
 }
 @media (max-width: 480px) {
 	h1 { font-size: 26px; }
-	#story-meta p { font-size: 11px; }
 	nav ul.site-links {
 		li { display: none; }
 		.npr { display: block; }
