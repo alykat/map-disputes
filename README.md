@@ -38,6 +38,8 @@ Contributors:
 
 Data references:
 - [Breakaway, Disputed Areas](http://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-breakaway-disputed-areas/) data layer from Natural Earth Data
+- Wikipedia
+- Google Maps
 
 Tools:
 - Website built using the [NPR Visuals app-template](https://github.com/nprapps/app-template/) as a starting point
