@@ -9,6 +9,46 @@
 @font-family-sans-serif:  "Open Sans", Helvetica, Arial, sans-serif;
 @font-family-monospace:   "Inconsolata", Menlo, Monaco, Consolas, "Courier New", monospace;
 
+// Colors
+@bground-1: rgb(243,255,129);
+@bground-2: rgb(201,255,129);
+@bground-3: rgb(158,255,129);
+@bground-4: rgb(129,255,141);
+@bground-5: rgb(129,255,183);
+@bground-6: rgb(129,255,225);
+@bground-7: rgb(129,242,255);
+@bground-8: rgb(129,200,255);
+@bground-9: rgb(129,159,255);
+@bground-10: rgb(140,129,255);
+@bground-11: rgb(183,129,255);
+@bground-12: rgb(224,129,255);
+@bground-13: rgb(255,129,244);
+@bground-14: rgb(255,129,201);
+@bground-15: rgb(255,138,128);
+@bground-16: rgb(255,181,129);
+@bground-17: rgb(255,223,128);
+
+//"Gray"scale
+@black-10:  rgb(255, 247, 231);
+@black-20:  rgb(230, 223, 209);
+@black-30:  rgb(204, 198, 185);
+@black-40:  rgb(179, 173, 162);
+@black-50:  rgb(153, 148, 138);
+@black-60:  rgb(128, 124, 116);
+@black-70:  rgb(102, 99, 93);
+@black-80:  rgb(77, 74, 69);
+@black-90:  rgb(51, 49, 46);
+@black-100: rgb(25, 25, 20);
+
+// Colloquial grays
+@bground-gray: rgb(230,230,230);
+@light-gray: @black-30;
+@med-gray: @black-50;
+@dark-gray: @black-70;
+@txt-black: @black-90;
+
+
+
 // General styles
 body {
     font: 16px/1.5em Helvetica, Arial, sans-serif;
@@ -72,7 +112,7 @@ a.btn.btn-blue {
 
 // Navbar
 nav {
-	background-color: #e0e0e0;
+	background-color: @black-20;
 	height: 46px;
 	overflow: hidden;
 	border-bottom: 2px solid #fff;
@@ -161,7 +201,8 @@ header {
 
 	h1 {
 	    font-size: 48px;
-	    font-family: @font-family-sans-serif;
+	    font-family: @font-family-monospace;
+        font-weight: 600;
 	    color: #555;
 	    margin-bottom: 11px;
 	}
@@ -287,7 +328,7 @@ footer {
 	}
 }
 @media (max-width: 767px) {
-	header { margin-left: -20px; margin-right: -20px; }
+	header { margin-left: -30px; margin-right: -30px; }
 	nav ul.site-links { margin-left: 20px; }
 	footer {
 		.primary { display: none; }
@@ -305,6 +346,8 @@ footer {
 		.npr { display: block; }
 	}
 	header {
+        margin-left: -20px;
+        margin-right: -20px;
 		padding: 33px 20px;
 		h1 { font-size: 36px; }
 	}
