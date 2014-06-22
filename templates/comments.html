@@ -10,9 +10,6 @@
     <!-- CHARTBEAT -->
     <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
 
-    <!-- FONTS -->
-    {% include '_fonts.html' %}
-
     <!-- CSS -->
     {{ CSS.push('less/comments_full.less') }}
     {% block extra_css %}{% endblock extra_css %}
@@ -41,5 +38,4 @@
     {{ JS.push('js/console.js') }}
     {{ JS.push('js/templates.js') }}
     {{ JS.push('js/comments.js') }}
-    {{ JS.render('js/comments-footer.min.js') }}
 </body>
