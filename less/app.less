@@ -110,6 +110,9 @@ a.btn.btn-blue {
 cite {
     font-style: italic;
 }
+.container {
+    max-width: 1000px;
+}
 
 // Navbar
 nav {
@@ -230,23 +233,25 @@ header {
     margin-bottom: 66px;
 }
 .disputed-name {
+    color: #111;
     font-size: 32px;
     margin: 0 0 11px 0;
 }
 .disputed-description {
-    // font-size: 15px;
+    color: #111;
     line-height: 1.6;
 }
 .disputed-description em {
-    font-size: 80%;
     color: #999;
-    margin-left: 11px;
+}
+.disputed-name-title {
+    margin-right: 5px;
 }
 .disputed-status {
     color: #666;
     font-size: 14px;
     display: inline-block;
-    margin-left: 11px;
+    // margin-left: 11px;
 }
 
 .disputes-item-map {
@@ -257,12 +262,30 @@ header {
   height: 300px;
   background-color: #000;
 }
-
+.disputed-title-wrap {
+    display: table;
+    margin-bottom: 20px;
+}
+.disputed-logo {
+    vertical-align: top;
+    margin-right: 15px;
+    height: 40px;
+    display: table-cell;
+}
+.disputed-hed-title {
+    display: table-cell;
+}
 
 // -----------------------------------
 // claimants component
 .claimants-item {
   list-style-type: none;
+  margin-bottom: 20px;
+  h4 {
+    font-family: @font-family-monospace;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
 }
 .claimants-item-map {
   background-size: contain;
@@ -361,6 +384,10 @@ footer {
 	}
 }
 @media (max-width: 480px) {
+    .disputed-logo {
+        height: 24px;
+        margin-right: 5px;
+    }
 	h1 { font-size: 26px; }
 	nav ul.site-links {
 		li { display: none; }
@@ -371,6 +398,9 @@ footer {
         margin-right: -20px;
 		padding: 33px 20px;
 		h1 { font-size: 36px; }
+        p {
+            font-size: 15px;
+        }
 	}
 	footer { border-top: 1px solid #CCC; margin-top: 24px; }
 }
