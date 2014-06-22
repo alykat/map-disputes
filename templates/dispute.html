@@ -31,9 +31,10 @@
       <div class="col-md-12">
         {% for row in COPY.final_set|sort(attribute='entity_name') %}
         {% if row.slug == "aksai-chin" %}
-        <h3 class="disputed-name">Aksai Chin – <span class="current-view">US view</span></h3>
+        <h3 class="disputed-name">Aksai China</h3>
+        <button class="js-toggleUsIndia btn btn-toggleView btn-toggleView--us" disabled="disabled">US view</button>
+        <button class="js-toggleUsIndia btn btn-toggleView btn-toggleView--india">India view</button>
           <div class="map--{{ row.slug }} us-view">
-            <p id="js-toggleUsIndia">What does India see?</p>
             <img class="disputes-item-map disputes-item-map--detail" src="/assets/maps/{{ row.image_in }}">
             <img class="disputes-item-map disputes-item-map--detail top" src="/assets/maps/{{ row.image_us }}">
           </div>
