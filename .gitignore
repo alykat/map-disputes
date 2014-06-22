@@ -50,3 +50,6 @@ data/gdoc*.csv
 www/comments/index.html
 analytics.json
 analytics.txt
+
+# ignoring images captured with the grab_images script
+generated_images/

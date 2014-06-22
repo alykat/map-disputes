@@ -15,7 +15,7 @@ import utils
 
 if app_config.DEPLOY_TO_SERVERS:
     import servers
-    
+
 if app_config.DEPLOY_CRONTAB:
     import cron_jobs
 
