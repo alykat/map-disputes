@@ -34,38 +34,47 @@
                 {% for row in COPY.final_set|sort(attribute='entity_name') %}
                 <div class="disputes-item disputes-item--{{ row.slug }}">
                     <h3 class="disputed-name">{{ row.entity_name }}</h3>
-                    <p class="disputed-description">{{ row.description }} <em>(Source: <a href="{{ row.desc_source }}">Wikipedia</a>)</em></p>
-                    <p><strong>Who Disputes This:</strong> {{ row.temp_claim }}</p>
                     
-                    <ul class="claimants">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <p class="disputed-description">{{ row.description }} <em>(Source: <a href="{{ row.desc_source }}">Wikipedia</a>)</em></p>
+                        </div>
+                        <div class="col-sm-4">
+                            <h4>Status</h4>
+                            <p>{{ row.temp_claim }}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row claimants">
                         {% if row.image_us %}
-                        <li class="claimants-item">
+                        <div class="col-sm-4 claimants-item">
                             <h4>What U.S. users see in Google Maps</h4>
                             <div class="disputes-item-map" data-url="{{ row.image_us }}"></div>
-                        </li>
+                        </div>
                         {% endif %}
 
                         {% if row.image_cn %}
-                        <li class="claimants-item">
+                        <div class="col-sm-4 claimants-item">
                             <h4>What Chinese users see in Google Maps</h4>
                             <div class="disputes-item-map" data-url="{{ row.image_cn }}"></div>
-                        </li>
+                        </div>
                         {% endif %}
 
-                        {% if row.image_in %}
-                        <li class="claimants-item">
+                        {% if row.image_cn %}
+                        <div class="col-sm-4 claimants-item">
                             <h4>What Indian users see in Google Maps</h4>
                             <div class="disputes-item-map" data-url="{{ row.image_in }}"></div>
-                        </li>
+                        </div>
                         {% endif %}
 
-                        {% if row.image_ru %}
-                        <li class="claimants-item">
+                        {% if row.image_cn %}
+                        <div class="col-sm-4 claimants-item">
                             <h4>What Russian users see in Google Maps</h4>
                             <div class="disputes-item-map" data-url="{{ row.image_ru }}"></div>
-                        </li>
+                        </div>
                         {% endif %}
-                    </ul>
+                    </div>
+
                 </div>
                 {% endfor %}
 
