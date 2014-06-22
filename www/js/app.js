@@ -1,6 +1,20 @@
 $(function() {
   this._disputesEl = this.querySelector('.disputes')
 
+  $('#js-toggleUsIndia').click(function (e) {
+    var isUsView = $('.map--aksai-chin').hasClass('us-view')
+    if (isUsView) {
+      $('.map--aksai-chin').removeClass('us-view')
+    } else {
+      $('.map--aksai-chin').addClass('us-view')
+    }
+    $('.map--aksai-chin img.top').toggleClass('transparent')
+    isUsView = !isUsView
+
+    $('.disputed-name .current-view')[0].innerHTML =  isUsView ? 'US view' : 'India view'
+    e.target.innerText = isUsView ? "What does India see?" : "What does the US see?"
+  })
+
   if (!this._disputesEl) return
 
   var disputeMapEls = this._disputesEl.querySelectorAll('.disputes-item-map')
