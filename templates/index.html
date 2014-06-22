@@ -10,7 +10,6 @@
     <ul class="social-links">
         <li class="twitter"><a rel="external"
           href="http://twitter.com/share?text={{ COPY.copy.twitter_text|urlencode }}&amp;url={{ SHARE_URL|urlencode }}" alt="Share on Twitter" target="_blank" onclick="_gaq.push(['_trackEvent', '{{ PROJECT_SLUG }}', 'tweet', 'nav']);">Share This Page On Twitter</a></li>
-        <li class="facebook"><a rel="external" href="https://www.facebook.com/dialog/feed?app_id={{ FACEBOOK_APP_ID }}&amp;link={{ SHARE_URL|urlencode }}&amp;name={{ COPY.sharing.facebook_title|urlencode }}&amp;picture={{ FACEBOOK_IMAGE_URL|urlencode }}&amp;redirect_uri={{ SHARE_URL|urlencode }}" alt="Share on Facebook" target="_blank" onclick="_gaq.push(['_trackEvent', '{{ PROJECT_SLUG }}', 'facebook', 'nav']);">Like This Page On Facebook</a></li>
     </ul>
     <ul class="site-links-2">
     </ul>
@@ -24,9 +23,10 @@
                     <img class="disputed-logo" src="https://photos-2.dropbox.com/t/0/AABs3xVcTAwfmP--G2GeolFxxt1QSCpmPEcD07eL5xJJlA/12/6017697/png/1024x768/3/1403467200/0/2/logo.png/WDdlMEH9bNExe13QppiKwAjoPK01nVDEEUFS-XhfIsg">
                     <h1 class="disputed-hed-title">{{ COPY.copy.title }}</h1>
                 </div>
-                <!-- <h2>{{ COPY.copy.subhed }}</h2> -->
+                <img src="assets/maps/animated.gif" alt="" class="animated" />
                 <p>{{ COPY.copy.description_p1 }}</p>
                 <p>{{ COPY.copy.description_p2 }}</p>
+                <p class="about"><a href="{{COPY.copy.about_link }}">{{ COPY.copy.about_text }}</a></p>
 
                 <ul class="subnav">
                     {% for row in COPY.final_set|sort(attribute='entity_name') %}
