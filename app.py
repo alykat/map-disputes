@@ -17,7 +17,30 @@ def index():
     """
     Example view demonstrating rendering a simple HTML page.
     """
-    return render_template('index.html', **make_context())
+
+    context = make_context()
+
+    # TODO(katie): dummy data, remove this
+    context['disputes'] = [
+        { 'name': 'Crimea',
+          'slug': 'crimea',
+          'image_us': 'http://cl.ly/image/0U3I3c30302z/Screen%20Shot%202014-06-22%20at%209.46.37%20AM.png',
+          'claimants': [{'name': 'Russia',
+                          'slug': 'russia',
+                          'url': 'http://cl.ly/image/3U2O2I3W3N04/Screen%20Shot%202014-06-22%20at%209.46.07%20AM.png'},
+                        {'name': 'Ukraine',
+                          'slug': 'ukraine',
+                          'url': 'http://cl.ly/image/0U3I3c30302z/Screen%20Shot%202014-06-22%20at%209.46.37%20AM.png'}]
+        },
+        { 'name': 'Jammu and Kashmir',
+          'slug': 'jammu-kashmir',
+          'image_us': 'http://f.cl.ly/items/2W2y3k1C102l0H2a453Q/Screen%20Shot%202014-06-22%20at%209.47.05%20AM.png',
+          'claimants': [{'name': 'India',
+                          'slug': 'india',
+                          'url': 'http://cl.ly/image/3G2G0h063g3A/Screen%20Shot%202014-06-22%20at%209.46.59%20AM.png'}]
+        }]
+
+    return render_template('index.html', **context)
 
 app.register_blueprint(static.static)
 

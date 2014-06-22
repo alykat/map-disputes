@@ -30,7 +30,22 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <p>lorem ipsum dolor sit amet</p>
+              <div class="disputes">
+                {% for dispute in disputes %}
+                  <div class="disputes-item disputes-item--{{ dispute.slug }}">
+                    <p class="disputes-item-title">{{ dispute.name }} – US view</p>
+                    <div class="disputes-item-map" data-url="{{ dispute.image_us }}"></div>
+
+                    <ul class="claimants">
+                      {% for claimant in dispute.claimants %}
+                      <li class="claimants-item claimants-item--{{ claimant.slug }}">
+                      <div class="claimants-item-map" data-url="{{ claimant.url }}"></div>
+                      </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                {% endfor %}
+              </div>
             </div>
         </div>
     </div>
