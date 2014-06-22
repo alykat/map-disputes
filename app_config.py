@@ -32,7 +32,7 @@ ASSETS_SLUG = 'map-disputes'
 """
 DEPLOYMENT
 """
-PRODUCTION_S3_BUCKETS = ['apps.npr.org', 'apps2.npr.org']
+PRODUCTION_S3_BUCKETS = ['opennews.kzhu.io', 'opennews.kzhu.io']
 STAGING_S3_BUCKETS = ['opennews.kzhu.io']
 ASSETS_S3_BUCKET = 'opennews.kzhu.io'
 

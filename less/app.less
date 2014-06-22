@@ -117,6 +117,9 @@ a.btn.btn-blue {
 cite {
     font-style: italic;
 }
+.container {
+    max-width: 1000px;
+}
 
 // Navbar
 nav {
@@ -189,16 +192,40 @@ header {
 	margin: 0 0 44px 0;
 
 	h1 {
-	    font-size: 48px;
+	    font-size: 64px;
 	    font-family: @font-family-monospace;
         font-weight: 600;
 	    color: #555;
-	    margin-bottom: 11px;
+	    margin-bottom: 22px;
 	}
 	h2 {
-	    font-size: 16px;
+	    font-size: 20px;
 	    color: #666;
 	    margin: 0 0 33px 0;
+	}
+	p {
+	    font-size: 20px;
+	    line-height: 1.6;
+	    color: #666;
+
+	    em {
+            color: #999;
+            font-size: 80%;
+            margin-left: 11px;
+        }
+
+        &.about {
+            font-weight: bold;
+        }
+	}
+
+	img.animated {
+	    float: right;
+	    margin: 0 0 20px 22px;
+	    // width: 50%;
+	    // max-width: 100%;
+	    // height: auto;
+        max-height: 420px;
 	}
 
     .subnav {
@@ -227,17 +254,25 @@ header {
     margin-bottom: 66px;
 }
 .disputed-name {
+    color: #111;
     font-size: 32px;
     margin: 0 0 11px 0;
 }
 .disputed-description {
-    // font-size: 15px;
+    color: #111;
     line-height: 1.6;
 }
 .disputed-description em {
-    font-size: 80%;
     color: #999;
-    margin-left: 11px;
+}
+.disputed-name-title {
+    margin-right: 5px;
+}
+.disputed-status {
+    color: #666;
+    font-size: 14px;
+    display: inline-block;
+    // margin-left: 11px;
 }
 
 .disputes-item-map {
@@ -261,11 +296,31 @@ header {
 }
 #js-toggleUsIndia { cursor: pointer; }
 
+.disputed-title-wrap {
+    display: table;
+    margin-bottom: 20px;
+}
+.disputed-logo {
+    vertical-align: top;
+    margin-right: 15px;
+    height: 40px;
+    display: table-cell;
+}
+.disputed-hed-title {
+    display: table-cell;
+}
+>>>>>>> origin/master
 
 // -----------------------------------
 // claimants component
 .claimants-item {
   list-style-type: none;
+  margin-bottom: 20px;
+  h4 {
+    font-family: @font-family-monospace;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
 }
 .claimants-item-map {
   background-size: contain;
@@ -353,6 +408,7 @@ footer {
 	}
 }
 @media (max-width: 767px) {
+    img.animated { height: 250px; }
 	header { margin-left: -30px; margin-right: -30px; }
 	nav ul.site-links { margin-left: 20px; }
 	footer {
@@ -364,6 +420,11 @@ footer {
 	}
 }
 @media (max-width: 480px) {
+    img.animated { height: auto; width: 100%; float: none; margin: 10px 0; }
+    .disputed-logo {
+        height: 24px;
+        margin-right: 5px;
+    }
 	h1 { font-size: 26px; }
 	nav ul.site-links {
 		li { display: none; }
@@ -374,6 +435,9 @@ footer {
         margin-right: -20px;
 		padding: 33px 20px;
 		h1 { font-size: 36px; }
+        p {
+            font-size: 15px;
+        }
 	}
 	footer { border-top: 1px solid #CCC; margin-top: 24px; }
 }

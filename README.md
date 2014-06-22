@@ -28,7 +28,9 @@ What is this?
 
 Show how Google Maps renders disputed territories differently depending on who's looking (in-progress for #owhack)
 
-Built (in-progress!) for the [Knight-Mozilla-MIT "The Open Internet" Hack Day](https://wiki.mozilla.org/OpenNews/hackdays/openinternet), held June 21-22, 2014.
+http://opennews.kzhu.io/map-disputes/
+
+This project was built for the [Knight-Mozilla-MIT "The Open Internet" Hack Day](https://wiki.mozilla.org/OpenNews/hackdays/openinternet), held June 21-22, 2014.
 
 Contributors:
 - Jose Dominguez (@josmas)
@@ -36,8 +38,22 @@ Contributors:
 - Gus Wezerek (@gwezerek)
 - Katie Zhu (@ktzhu)
 
+What we did:
+- Identified disputed territories (Natural Earth Data disputed territories shapefile data)
+- Removed locations that did not reflect unusual borders in Google Maps
+- Pulled descriptions from Wikipedia
+- Wrote a script to screencapture maps on various country instances of Google Maps
+- Built a website
+
+Things left to do:
+- Connect image-cropping tool to the Google Spreadsheet (everything currently hard-coded)
+- Better highlight where the disputed boundaries are (either via an image filter on the screencapped maps, a separate map highlighting the border in question, or an animated gif).
+- Better automate adding disputed territories to the list and identifying their lat/lon. (Intended to generate this off the shapefile, but ended up doing it manually.)
+
 Data references:
 - [Breakaway, Disputed Areas](http://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-breakaway-disputed-areas/) data layer from Natural Earth Data
+- Wikipedia
+- Google Maps
 
 Tools:
 - Website built using the [NPR Visuals app-template](https://github.com/nprapps/app-template/) as a starting point
