@@ -17,7 +17,7 @@ $(function() {
 
   if (!this._disputesEl) return
 
-  var disputeMapEls = this._disputesEl.querySelectorAll('.disputes-item-map')
+  var disputeMapEls = this._disputesEl.querySelectorAll('.disputed-img-wrap')
   var claimantMapEls = this._disputesEl.querySelectorAll('.claimants-item-map')
 
   for (var i = 0; i < disputeMapEls.length; i++) {
