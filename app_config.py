@@ -36,8 +36,8 @@ PRODUCTION_S3_BUCKETS = ['opennews.kzhu.io', 'opennews.kzhu.io']
 STAGING_S3_BUCKETS = ['opennews.kzhu.io']
 ASSETS_S3_BUCKET = 'opennews.kzhu.io'
 
-#PRODUCTION_SERVERS = ['cron.nprapps.org']
-#STAGING_SERVERS = ['50.112.92.131']
+PRODUCTION_SERVERS = ['cron.nprapps.org']
+STAGING_SERVERS = ['50.112.92.131']
 
 # Should code be deployed to the web/cron servers?
 DEPLOY_TO_SERVERS = False
