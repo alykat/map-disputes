@@ -29,27 +29,31 @@
 <section id="content">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-              <div class="disputes">
-                {% for dispute in disputes %}
-                  <div class="disputes-item disputes-item--{{ dispute.slug }}">
-                    <p class="disputes-item-title">{{ dispute.name }} – US view</p>
-                    <div class="disputes-item-map" data-url="{{ dispute.image_us }}"></div>
+                <div class="col-md-12">
+                    <div class="disputes">
+                    
+                        {% for row in COPY.final_set %}
+                    
+                        {% for dispute in disputes %}
+                        <div class="disputes-item disputes-item--{{ dispute.slug }}">
+                            <p class="disputes-item-title">{{ dispute.name }} – US view</p>
+                            <div class="disputes-item-map" data-url="{{ dispute.image_us }}"></div>
 
-                    <ul class="claimants">
-                      {% for claimant in dispute.claimants %}
-                      <li class="claimants-item claimants-item--{{ claimant.slug }}">
-                      <div class="claimants-item-map" data-url="{{ claimant.url }}"></div>
-                      </li>
-                      {% endfor %}
-                    </ul>
-                  </div>
-                {% endfor %}
-              </div>
+                            <ul class="claimants">
+                            {% for claimant in dispute.claimants %}
+                                <li class="claimants-item claimants-item--{{ claimant.slug }}">
+                                    <div class="claimants-item-map" data-url="{{ claimant.url }}"></div>
+                                </li>
+                            {% endfor %}
+                            </ul>
+                        </div>
 
-                <h3 class="disputed-name">Golan Heights</h3>
-                <img src="">
-                <p class="disputed-description">"Demchok is a small village and military emcampment in the Indian-administered part of the disputed Demchok sector south of Aksai Chin, in the Leh district of Ladakh in the state of Jammu and Kashmir. The Line of Actual Control (LAC) passes along the southeast side of the village, following a wadi just upstream from the nearby Indus River. Across the wadi, less than a kilometer away, is a Chinese-administered village, called Dêmqog, which was once part of Demchok. It is part of the Ngari Prefecture within Tibet." <a href="http://en.wikipedia.org/wiki/Demchok" class="disputed-source">Source</a>
+                        {% endfor %}
+                    </div>
+
+                    <h3 class="disputed-name">Golan Heights</h3>
+                    <img src="">
+                    <p class="disputed-description">"Demchok is a small village and military emcampment in the Indian-administered part of the disputed Demchok sector south of Aksai Chin, in the Leh district of Ladakh in the state of Jammu and Kashmir. The Line of Actual Control (LAC) passes along the southeast side of the village, following a wadi just upstream from the nearby Indus River. Across the wadi, less than a kilometer away, is a Chinese-administered village, called Dêmqog, which was once part of Demchok. It is part of the Ngari Prefecture within Tibet." <a href="http://en.wikipedia.org/wiki/Demchok" class="disputed-source">Source</a>
             </div>
         </div>
     </div>
