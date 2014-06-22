@@ -20,8 +20,10 @@
         <div class="row">
             <div class="col-md-12">
                 <h1>{{ COPY.copy.title }}</h1>
-                <h2>{{ COPY.copy.description }}</h2>
-                
+                <!-- <h2>{{ COPY.copy.subhed }}</h2> -->
+                <p>{{ COPY.copy.description_p1 }}</p>
+                <p>{{ COPY.copy.description_p2 }}</p>
+
                 <ul class="subnav">
                     {% for row in COPY.final_set|sort(attribute='entity_name') %}
                     <li><a href="#{{ row.slug }}">{{ row.entity_name }}</a></li>
@@ -36,11 +38,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 disputes">
-                
+
                 {% for row in COPY.final_set|sort(attribute='entity_name') %}
                 <div class="disputes-item" id="{{ row.slug }}">
                     <h3 class="disputed-name">{{ row.entity_name }}</h3>
-                    
+
                     <div class="row">
                         <div class="col-sm-9">
                             <p class="disputed-description">{{ row.description }} <em>(Source: <a href="{{ row.desc_source }}">Wikipedia</a>)</em></p>
@@ -50,7 +52,7 @@
                             <p>{{ row.temp_claim }}</p>
                         </div>
                     </div>
-                    
+
                     <div class="row claimants">
                         <div class="col-sm-4 claimants-item">
                             <h4>What U.S. users see in Google Maps</h4>
