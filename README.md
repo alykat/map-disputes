@@ -29,13 +29,17 @@ Show how Google Maps renders disputed territories differently depending on who's
 
 Built (in-progress!) for the [Knight-Mozilla-MIT "The Open Internet" Hack Day](https://wiki.mozilla.org/OpenNews/hackdays/openinternet), held June 21-22, 2014.
 
-This project was built using the [NPR Visuals app-template](https://github.com/nprapps/app-template/) as a starting point.
-
 Contributors:
 - Jose Dominguez (@josmas)
 - Alyson Hurt (@alykat)
 - Gus Wezerek (@gwezerek)
 - Katie Zhu (@ktzhu)
+
+Data references:
+- [Breakaway, Disputed Areas](http://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-breakaway-disputed-areas/) data layer from Natural Earth Data
+
+Tools:
+- Website built using the [NPR Visuals app-template](https://github.com/nprapps/app-template/) as a starting point
 
 
 Assumptions

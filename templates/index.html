@@ -1,9 +1,11 @@
 {% extends '_base.html' %}
 
+{% block title %}{{ COPY.copy.title }} | {{ COPY.copy.header_title }}{% endblock title %}
+
 {% block content %}
 <nav role="navigation">
     <ul class="site-links">
-        <li>{{ COPY.copy.header_title }}</li>
+        <li><a href="{{ COPY.copy.header_link }}">{{ COPY.copy.header_title }}</a></li>
     </ul>
     <ul class="social-links">
         <li class="twitter"><a rel="external" href="http://twitter.com/share?text={{ COPY.sharing.twitter_text|urlencode }}&amp;url={{ SHARE_URL|urlencode }}" alt="Share on Twitter" target="_blank" onclick="_gaq.push(['_trackEvent', '{{ PROJECT_SLUG }}', 'tweet', 'nav']);">Share This Page On Twitter</a></li>
