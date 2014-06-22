@@ -1,0 +1,17 @@
+{% extends '_base.html' %}
+
+{% block title %}{{ COPY.copy.title }} | {{ COPY.copy.header_title }}{% endblock title %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 disputes">
+      {% for row in COPY.final_set|sort(attribute='entity_name') %}
+      {% if row.slug == "aksai-chin" %}
+        <div class="disputes-item-map" data-url="/assets/maps/{{ row.image_us }}"></div>
+      {% endif %}
+      {% endfor %}
+    <div>
+  </div>
+</div>
+{% endblock content %}

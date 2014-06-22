@@ -1,6 +1,8 @@
 $(function() {
   this._disputesEl = this.querySelector('.disputes')
 
+  if (!this._disputesEl) return
+
   var disputeMapEls = this._disputesEl.querySelectorAll('.disputes-item-map')
   var claimantMapEls = this._disputesEl.querySelectorAll('.claimants-item-map')
 
