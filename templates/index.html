@@ -41,23 +41,32 @@
 
                 {% for row in COPY.final_set|sort(attribute='entity_name') %}
                 <div class="disputes-item" id="{{ row.slug }}">
-                    <h3 class="disputed-name">{{ row.entity_name }}</h3>
-
-                    <div class="row">
-                        <div class="col-sm-9">
-                            <p class="disputed-description">{{ row.description }} <em>(Source: <a href="{{ row.desc_source }}">Wikipedia</a>)</em></p>
-                        </div>
-                        <div class="col-sm-3">
-                            <h4>Status</h4>
-                            <p>{{ row.temp_claim }}</p>
-                        </div>
-                    </div>
+                    <h3 class="disputed-name">
+                        {{ row.entity_name }}
+                        <span class="disputed-status">{{ row.temp_claim }}</span>
+                    </h3>
+                    
+                    <p class="disputed-description">{{ row.description }} <em>(Source: <a href="{{ row.desc_source }}">Wikipedia</a>)</em></p>
 
                     <div class="row claimants">
                         {% if row.image_us %}
                         <div class="col-sm-4 claimants-item">
                             <h4>What U.S. users see in Google Maps</h4>
                             <div class="disputes-item-map" data-url="assets/maps/{{ row.image_us }}"></div>
+                        </div>
+                        {% endif %}
+
+                        {% if row.image_bn %}
+                        <div class="col-sm-4 claimants-item">
+                            <h4>What users in Bahrain see</h4>
+                            <div class="disputes-item-map" data-url="assets/maps/{{ row.image_bn }}"></div>
+                        </div>
+                        {% endif %}
+
+                        {% if row.image_bt %}
+                        <div class="col-sm-4 claimants-item">
+                            <h4>What users in Bhutan see</h4>
+                            <div class="disputes-item-map" data-url="assets/maps/{{ row.image_bt }}"></div>
                         </div>
                         {% endif %}
 
@@ -79,6 +88,20 @@
                         <div class="col-sm-4 claimants-item">
                             <h4>What users in Japan see</h4>
                             <div class="disputes-item-map" data-url="assets/maps/{{ row.image_jp }}"></div>
+                        </div>
+                        {% endif %}
+
+                        {% if row.image_my %}
+                        <div class="col-sm-4 claimants-item">
+                            <h4>What users in Malaysia see</h4>
+                            <div class="disputes-item-map" data-url="assets/maps/{{ row.image_my }}"></div>
+                        </div>
+                        {% endif %}
+
+                        {% if row.image_ph %}
+                        <div class="col-sm-4 claimants-item">
+                            <h4>What users in the Phillippines see</h4>
+                            <div class="disputes-item-map" data-url="assets/maps/{{ row.image_ph }}"></div>
                         </div>
                         {% endif %}
 
