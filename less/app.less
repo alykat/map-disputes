@@ -200,24 +200,25 @@ header {
 	    font-size: 20px;
 	    line-height: 1.6;
 	    color: #666;
-	    
+
 	    em {
             color: #999;
             font-size: 80%;
             margin-left: 11px;
         }
-        
-        &.about { 
+
+        &.about {
             font-weight: bold;
         }
 	}
-	
+
 	img.animated {
 	    float: right;
-	    margin-left: 22px;
-	    width: 50%;
-	    max-width: 100%;
-	    height: auto;
+	    margin: 0 0 20px 22px;
+	    // width: 50%;
+	    // max-width: 100%;
+	    // height: auto;
+        max-height: 420px;
 	}
 
     .subnav {
@@ -386,6 +387,7 @@ footer {
 	}
 }
 @media (max-width: 767px) {
+    img.animated { height: 250px; }
 	header { margin-left: -30px; margin-right: -30px; }
 	nav ul.site-links { margin-left: 20px; }
 	footer {
@@ -397,6 +399,7 @@ footer {
 	}
 }
 @media (max-width: 480px) {
+    img.animated { height: auto; width: 100%; float: none; margin: 10px 0; }
     .disputed-logo {
         height: 24px;
         margin-right: 5px;
