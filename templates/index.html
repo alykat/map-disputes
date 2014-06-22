@@ -20,9 +20,12 @@
         <div class="row">
             <div class="col-md-12">
                 <h1>{{ COPY.copy.title }}</h1>
-                <!-- <h2>{{ COPY.copy.subhed }}</h2> -->
+                
+                <img src="assets/maps/animated.gif" alt="" class="animated" />
+
                 <p>{{ COPY.copy.description_p1 }}</p>
                 <p>{{ COPY.copy.description_p2 }}</p>
+                <p class="about"><a href="{{COPY.copy.about_link }}">{{ COPY.copy.about_text }}</a></p>
 
                 <ul class="subnav">
                     {% for row in COPY.final_set|sort(attribute='entity_name') %}
