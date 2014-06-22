@@ -46,6 +46,13 @@
 @med-gray: @black-50;
 @dark-gray: @black-70;
 @txt-black: @black-90;
+.transition(@transition) {
+  -webkit-transition: @transition;
+     -moz-transition: @transition;
+      -ms-transition: @transition;
+       -o-transition: @transition;
+          transition: @transition;
+}
 
 
 
@@ -276,6 +283,19 @@ header {
   height: 300px;
   background-color: #000;
 }
+.disputes-item-map--detail {
+  height: 800px;
+  width: 75%;
+  position: absolute;
+  left: 0;
+  margin-bottom: 100px;
+  .transition(opacity 1s ease-in-out);
+}
+.disputes-item-map--detail.transparent {
+  opacity: 0;
+}
+#js-toggleUsIndia { cursor: pointer; }
+
 .disputed-title-wrap {
     display: table;
     margin-bottom: 20px;

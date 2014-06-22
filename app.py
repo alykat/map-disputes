@@ -20,9 +20,9 @@ def index():
 
     return render_template('index.html', **make_context())
 
-#@app.route('/dispute/<string:slug>/')
-#def dispute(slug):
-#  return render_template('dispute.html', **make_context())
+@app.route('/dispute/<string:slug>/')
+def dispute(slug):
+  return render_template('dispute.html', **make_context())
 
 app.register_blueprint(static.static)
 
