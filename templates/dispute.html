@@ -19,7 +19,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-              <h1>Play with the different maps</h1>
+              <h1>Aksai Chin</h1>
             </div>
         </div>
     </div>
@@ -31,7 +31,6 @@
       <div class="col-md-12">
         {% for row in COPY.final_set|sort(attribute='entity_name') %}
         {% if row.slug == "aksai-chin" %}
-        <h3 class="disputed-name">Aksai China</h3>
         <button class="js-toggleUsIndia btn btn-toggleView btn-toggleView--us" disabled="disabled">US view</button>
         <button class="js-toggleUsIndia btn btn-toggleView btn-toggleView--india">India view</button>
           <div class="map--{{ row.slug }} us-view">
